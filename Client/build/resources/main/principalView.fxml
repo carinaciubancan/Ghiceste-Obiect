@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerPrincipal">
+   <children>
+      <Button fx:id="buttonLogout" layoutX="31.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="25.0" prefWidth="172.0" text="LogOut" />
+      <Label layoutX="49.0" layoutY="75.0" text="Pozitie 1:" />
+      <Label layoutX="49.0" layoutY="103.0" text="Pozitie 2:" />
+      <TextField fx:id="poz1" layoutX="119.0" layoutY="71.0" prefHeight="25.0" prefWidth="35.0" />
+      <TextField fx:id="poz2" layoutX="119.0" layoutY="99.0" prefHeight="25.0" prefWidth="35.0" />
+      <Label layoutX="29.0" layoutY="42.0" text="Alegeti pozitii numere intre 1-6" />
+      <Button fx:id="btnStart" layoutX="33.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleStart" prefHeight="25.0" prefWidth="172.0" text="Start Joc :)" />
+      <Label layoutX="35.0" layoutY="209.0" text="Jucator 1" />
+      <Label layoutX="35.0" layoutY="253.0" text="Jucator 2" />
+      <Label layoutX="35.0" layoutY="300.0" text="Jucator 3" />
+      <Label fx:id="jucator1" layoutX="105.0" layoutY="209.0" text="Label" />
+      <Label fx:id="jucator2" layoutX="105.0" layoutY="253.0" text="Label" />
+      <Label fx:id="jucator3" layoutX="105.0" layoutY="300.0" text="Label" />
+      <Label fx:id="cuvant1" layoutX="167.0" layoutY="209.0" text="Label" />
+      <Label fx:id="cuvant2" layoutX="167.0" layoutY="253.0" text="Label" />
+      <Label fx:id="cuvant3" layoutX="167.0" layoutY="300.0" text="Label" />
+      <ListView fx:id="listView" disable="true" layoutX="300.0" layoutY="43.0" prefHeight="123.0" prefWidth="200.0" />
+      <Label layoutX="300.0" layoutY="192.0" text="Propunere: " />
+      <TextField fx:id="propunere" disable="true" layoutX="370.0" layoutY="188.0" prefHeight="25.0" prefWidth="128.0" />
+      <Button fx:id="btnTrimite" disable="true" layoutX="300.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleTrimitePropunere" prefHeight="25.0" prefWidth="200.0" text="Trimite Propunere :(" />
+      <TextArea fx:id="textArea" layoutX="298.0" layoutY="262.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="49.0" layoutY="133.0" text="Pozitie 3:" />
+      <TextField fx:id="poz3" layoutX="119.0" layoutY="129.0" prefHeight="25.0" prefWidth="35.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd" >
+
+    <util:properties id="jdbcProps" location="classpath:server.properties"/>
+
+    <bean id="jdbcJucatorRepo" class="joc.persistance.jdbc.JucatorDBRepository">
+        <constructor-arg ref="jdbcProps" />
+    </bean>
+
+    <bean id="jocHibernate" class="joc.persistance.jdbc.JocHibernateRepository">
+
+    </bean>
+
+    <bean id="propunereHibernate" class="joc.persistance.jdbc.PropunereHibernateRepository">
+
+    </bean>
+
+
+    <bean id="service" class="server.ServiceImplementation">
+        <constructor-arg ref="jdbcJucatorRepo" />
+        <constructor-arg ref="jocHibernate" />
+        <constructor-arg ref="propunereHibernate" />
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+
+        <property name="serviceName" value="Joc"/>
+        <property name="service" ref="service"/>
+        <property name="serviceInterface" value="services.IServices"/>
+        <property name="servicePort" value="1099"/>
+    </bean>
+
+</beans>

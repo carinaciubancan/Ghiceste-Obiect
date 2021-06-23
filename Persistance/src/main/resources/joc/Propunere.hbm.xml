@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name = "joc.Propunere"
+           table="Propunere">
+        <id name = "id" column = "id">
+            <generator class="increment"/>
+        </id>
+        <property name="idJoc" column = "idJoc"/>
+        <property name="nrRunda" column = "nrRunda"/>
+        <property name="username" column="username"/>
+        <property name="jucatorPropus" column="jucatorPropus"/>
+        <property name="pozAleasa" column="pozAleasa"/>
+        <property name="nrPuncte" column="nrPuncte"/>
+
+    </class>
+
+</hibernate-mapping>

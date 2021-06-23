@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+
+
+        <property name="connection.url">jdbc:sqlite:C:\\Users\\dell\\Desktop\\UBB_sem4\\MPP\\SubiecteEXAMEN\\Ultimul\\modelMpp\\joc.db</property>
+<!--        <property name="hibernate.hbm2ddl.auto">create</property>-->
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <mapping resource="joc/Joc.hbm.xml"/>
+        <mapping resource="joc/Propunere.hbm.xml"/>
+<!--        <mapping resource="firma/Produs.hbm.xml"/>-->
+<!--        <mapping resource="firma/Comanda.hbm.xml"/>-->
+
+    </session-factory>
+</hibernate-configuration>
